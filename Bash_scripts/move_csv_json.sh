@@ -16,7 +16,8 @@ echo '{"name": "General Ibrahim", "age": 55, "city": "Gumel"}' > "$source_folder
 
 for csv_json_file in $source_folder/*.{csv,json}; 
 do
-    if [ -f "$csv_json_file" ]; then
+    if [ -f "$csv_json_file" ]; 
+    then
         mv "$csv_json_file" "$final_folder/"
         echo "CSV & JSON files moved successfully"
     else

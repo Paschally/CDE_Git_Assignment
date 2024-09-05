@@ -17,7 +17,8 @@ mkdir -p "$load_folder"
 mv "$transformed_file" "$load_folder/$final_file"
 
 # Check if the final file exists in the load folder
-if [ -f "$load_folder/$final_file" ]; then
+if [ -f "$load_folder/$final_file" ]; 
+then
     echo "File successfully loaded into the Gold directory."
 else
     echo "Loading failed."

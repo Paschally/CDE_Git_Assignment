@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+# The link provided does not contain the csv files...
 database_name="posey"
 database_user="postgres"
 data_url="https://we.tl/t-2xYLL816Yt"
@@ -20,5 +20,5 @@ unzip "$csv_folder/csv_files.zip" -d "$csv_folder"
 for file in "${csv_files[@]}";
 do
     echo "Loading $file into the database..."
-    psql -U "$database_user" -d "$daabase_name" -c "\copy ${file%.csv} FROM '$csv_folder/$file' DELIMITER ',' CSV HEADER"
+    psql -U "$database_user" -d "$database_name" -c "\copy ${file%.csv} FROM '$csv_folder/$file' DELIMITER ',' CSV HEADER"
 done
